@@ -412,7 +412,7 @@
                 </div>
             </template>
 
-            ProfileGrid
+             <template #profiles>
                 <div v-if="loading" role="status" aria-live="polite">
                     {{ t('publicProfiles.loading') }}
                 </div>
@@ -463,7 +463,7 @@
                     <!-- Left Content: Text (Wider column for no-wrap) -->
                     <div class="text-left relative z-20 lg:col-span-12 xl:col-span-12">
                         <!-- Badge -->
-                        <div
+                        <div v-if="false"
                             class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary-200/50 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-md mb-8 shadow-sm animate-fade-in-up"
                         >
                             <span class="relative flex h-2 w-2">
@@ -480,7 +480,7 @@
                             >
                         </div>
 
-                        <div v-if="false" class="max-w-5xl space-y-4 animate-pulse">
+                        <div v-if="isInitialLoading" class="max-w-5xl space-y-4 animate-pulse">
                             <div
                                 class="h-10 w-44 rounded-2xl bg-white/75 dark:bg-white/10 sm:h-14 sm:w-56 lg:h-16 lg:w-72"
                             ></div>
@@ -604,8 +604,8 @@
 
                 <!-- Clients Section (Visually Separated) -->
                 <div
-                    <class="mt-10 pt-8 pb-8 sm:mt-16 sm:pt-12 sm:pb-10 border-t border-transparent bg-transparent dark:bg-transparent backdrop-blur-sm">
-                    >
+                    class="mt-10 pt-8 pb-8 sm:mt-16 sm:pt-12 sm:pb-10 border-t border-transparent bg-transparent dark:bg-transparent backdrop-blur-sm"
+                >
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div class="text-center mb-16 relative">
                             <div class="relative inline-flex flex-col items-center">
