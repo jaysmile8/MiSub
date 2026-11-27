@@ -412,7 +412,7 @@
                 </div>
             </template>
 
-            <template #profiles>
+            ProfileGrid
                 <div v-if="loading" role="status" aria-live="polite">
                     {{ t('publicProfiles.loading') }}
                 </div>
@@ -480,7 +480,7 @@
                             >
                         </div>
 
-                        <div v-if="isInitialLoading" class="max-w-5xl space-y-4 animate-pulse">
+                        <div v-if="false" class="max-w-5xl space-y-4 animate-pulse">
                             <div
                                 class="h-10 w-44 rounded-2xl bg-white/75 dark:bg-white/10 sm:h-14 sm:w-56 lg:h-16 lg:w-72"
                             ></div>
@@ -531,7 +531,7 @@
                     />
 
                     <!-- Loading State -->
-                    <div
+                   <!-- <div
                         v-if="loading"
                         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                     >
@@ -600,7 +600,7 @@
                             @register-canvas="registerQrCanvas"
                         />
                     </div>
-                </div>
+                </div> --> 
 
                 <!-- Clients Section (Visually Separated) -->
                 <div
