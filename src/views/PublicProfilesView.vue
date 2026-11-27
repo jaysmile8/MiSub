@@ -532,8 +532,7 @@
 
                     <!-- Loading State -->
                    <div
-                       <template v-if="false">
-                        v-if="loading"
+                        v-if="false"
                         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                     >
                         <div
@@ -557,7 +556,7 @@
 
                     <!-- Error State -->
                     <div
-                        v-else-if="error"
+                        v-else-if="false"
                         class="text-center py-20 bg-white/50 dark:bg-gray-800/50 misub-radius-lg border border-red-100 dark:border-red-900/30 backdrop-blur-sm"
                     >
                         <div
@@ -580,16 +579,15 @@
                         </button>
                     </div>
                     <div
-                        v-else-if="publicProfiles.length === 0"
+                        v-else-if="false"
                         role="status"
                         class="py-16 text-center text-gray-500 dark:text-gray-400"
                     >
-                        </template>
                         {{ t('publicProfiles.empty') }}
                     </div>
 
                     <!-- Profile Grid -->
-                    <div v-else-if="publicProfiles.length > 0" class="animate-fade-in-up delay-300">
+                    <div v-else-if="false" class="animate-fade-in-up delay-300">
                         <ProfileGrid
                             :profiles="publicProfiles"
                             :is-qr-expanded="isQRExpanded"
