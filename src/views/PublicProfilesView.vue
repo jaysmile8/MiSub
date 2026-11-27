@@ -604,7 +604,7 @@
 
                 <!-- Clients Section (Visually Separated) -->
                 <div
-                    <footer v-if="false" class="mt-10 pt-8 pb-8 sm:mt-16 sm:pt-12 sm:pb-10 border-t border-transparent bg-transparent dark:bg-transparent backdrop-blur-sm">
+                    <class="mt-10 pt-8 pb-8 sm:mt-16 sm:pt-12 sm:pb-10 border-t border-transparent bg-transparent dark:bg-transparent backdrop-blur-sm">
                     >
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div class="text-center mb-16 relative">
