@@ -11,20 +11,6 @@
     const { t } = useI18n();
 
     const shouldHideLoginButton = computed(() => {
-        if (sessionStore.sessionState === 'loading') {
-            return true;
-        }
-
-        const rawPath = sessionStore.publicConfig?.customLoginPath;
-        if (!rawPath || typeof rawPath !== 'string') {
-            return false;
-        }
-
-        const normalizedPath = rawPath.trim().replace(/^\/+/, '');
-        if (!normalizedPath || normalizedPath === 'login') {
-            return false;
-        }
-
         return true;
     });
 
@@ -49,23 +35,17 @@
             <div class="safe-top-inset">
                 <div class="flex justify-between items-center h-16 md:h-[76px]">
                     <BrandLogo
-                        v-if="!hideBranding"
-                        :to="isLoggedIn ? '/dashboard' : '/'"
+                        v-if="isLoggedIn && !hideBranding"
+                        to="/dashboard"
                         text-size-class="text-lg"
                         :icon-size="32"
                     />
-                    <router-link
-                        v-else
-                        :to="isLoggedIn ? '/dashboard' : '/'"
-                        class="text-sm font-semibold tracking-[0.24em] uppercase text-gray-500 dark:text-gray-400"
-                        >{{ t('app.home') }}</router-link
-                    >
-
+                    <div v-else></div>
                     <NavActionGroup
                         :is-logged-in="isLoggedIn"
                         :show-explore="false"
                         :show-settings="true"
-                        :show-login-button="!shouldHideLoginButton"
+                        :show-login-button="false"
                         :hide-external-repo="hideBranding"
                         :with-focus-ring="true"
                         rounded-class="misub-radius-md"
